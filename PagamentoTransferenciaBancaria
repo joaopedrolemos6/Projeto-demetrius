@@ -1,0 +1,15 @@
+public class PagamentoTransferenciaBancaria extends Pagamento {
+    private String numeroConta;
+    private String banco;
+
+    public PagamentoTransferenciaBancaria(double valor, String numeroConta, String banco) {
+        super(valor);
+        this.numeroConta = numeroConta;
+        this.banco = banco;
+    }
+
+    @Override
+    public void processarPagamento() {
+        System.out.println("Processando pagamento com Transferência Bancária no valor de R$ " + valor);
+    }
+}
