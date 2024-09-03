@@ -1,0 +1,20 @@
+class PagamentoCartaoCredito extends Pagamento {
+    private String numeroCartao;
+    private String nomeTitular;
+    private String dataValidade;
+    private String codigoSeguranca;
+
+    public PagamentoCartaoCredito(double valor, String numeroCartao, String nomeTitular, String dataValidade, String codigoSeguranca) {
+        super(valor);
+        this.numeroCartao = numeroCartao;
+        this.nomeTitular = nomeTitular;
+        this.dataValidade = dataValidade;
+        this.codigoSeguranca = codigoSeguranca;
+    }
+
+    @Override
+    public void processarPagamento() {
+        System.out.println("Processando pagamento com Cartão de Crédito no valor de R$ " + valor);
+        // Lógica para processar pagamento com cartão de crédito
+    }
+}
