@@ -1,0 +1,13 @@
+public class Main {
+    public static void main(String[] args) {
+        Ecommerce ecommerce = new Ecommerce();
+
+        Pagamento pagamento1 = new PagamentoCartaoCredito(150.0, "1234567890123456", "João Silva", "12/24", "123");
+        Pagamento pagamento2 = new PagamentoPayPal(200.0, "usuario@paypal.com");
+        Pagamento pagamento3 = new PagamentoTransferenciaBancaria(300.0, "12345-6", "Banco do Brasil");
+
+        ecommerce.realizarPagamento(pagamento1);
+        ecommerce.realizarPagamento(pagamento2);
+        ecommerce.realizarPagamento(pagamento3);
+    }
+}
